@@ -183,7 +183,7 @@ export class SvnFolderCommitPanel {
             const filteredFileStatuses = allFileStatuses.filter(fileStatus => {
                 // 检查是否显示丢失的文件
                 const config = vscode.workspace.getConfiguration('vscode-svn');
-                const showMissingFiles = config.get<boolean>('showMissingFiles', false);
+                const showMissingFiles = config.get<boolean>('showMissingFiles', true);
                 
                 // 如果是丢失文件且配置不显示丢失文件，则排除
                 if (fileStatus.type === 'missing' && !showMissingFiles) {

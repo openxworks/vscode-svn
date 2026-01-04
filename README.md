@@ -234,6 +234,12 @@ file:///path/to/local/repo            # 本地仓库
    - 重置为默认配置
 6. **查看过滤信息**：通过命令面板执行"SVN: 显示过滤信息"查看当前的过滤配置
 
+### 丢失文件（missing / !）显示开关
+当文件在SVN版本库中存在，但本地被直接删除时，`svn status` 会显示为 `!`（丢失 / missing）。
+
+- 默认会在“文件夹提交面板”中显示丢失文件，方便你一并提交删除
+- 可通过 VSCode 设置项 `vscode-svn.showMissingFiles` 控制是否显示
+
 ### AI配置
 插件支持接入任何兼容OpenAI格式的AI服务，包括但不限于：
 - OpenAI GPT系列
